@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - LinkTree</title>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .button {
+      padding: 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark {
+      background-color: #1a365d;
+      color: #d1d5db;
+    }
+    .light {
+      background-color: #fbbf24;
+      color: #1a202c;
+    }
+    .button:hover {
+      filter: brightness(90%);
+    }
+    .toggle {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark .toggle {
+      background-color: #d1d5db;
+      color: #1a365d;
+    }
+    .light .toggle {
+      background-color: #1a202c;
+      color: #fbbf24;
+    }
+  </style>
+</head>
+<body class="light">
+  <button class="toggle" id="themeToggle">
+    <i class="icon" id="themeIcon" data-lucide="moon"></i>
+  </button>
+  <div class="container">
+    <div>
+      <h1 id="name" class="light">Your Name</h1>
+      <p id="tagline" class="light">Brief description or tagline</p>
+    </div>
+    <div>
+      <a href="https://yourwebsite.com" class="button light">
+        <i data-lucide="globe"></i>&nbsp;Personal Website
+      </a>
+      <a href="https://instagram.com/yourusername" class="button light">
+        <i data-lucide="instagram"></i>&nbsp;Instagram
+      </a>
+      <a href="https://twitter.com/yourusername" class="button light">
+        <i data-lucide="twitter"></i>&nbsp;Twitter
+      </a>
+      <a href="https://linkedin.com/in/yourusername" class="button light">
+        <i data-lucide="linkedin"></i>&nbsp;LinkedIn
+      </a>
+      <a href="https://github.com/yourusername" class="button light">
+        <i data-lucide="github"></i>&nbsp;GitHub
+      </a>
+      <a href="https://facebook.com/yourusername" class="button light">
+        <i data-lucide="facebook"></i>&nbsp;Facebook
+      </a>
+    </div>
+  </div>
+  <script>
+    lucide.createIcons();
+
+    const toggleButton = document.getElementById('themeToggle');
+    const body = document.body;
+    const icon = document.getElementById('themeIcon');
+    const buttons = document.querySelectorAll('.button');
+
+    toggleButton.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark');
+      body.classList.toggle('dark', !isDark);
+      body.classList.toggle('light', isDark);
+
+      icon.setAttribute('data-lucide', isDark ? 'moon' : 'sun');
+      lucide.createIcons();
+
+      buttons.forEach((btn) => {
+        btn.classList.toggle('dark', !isDark);
+        btn.classList.toggle('light', isDark);
+      });
+    });
+  </script>
+</body>
+</html>
