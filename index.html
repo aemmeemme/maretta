@@ -63,6 +63,12 @@
       align-items: center;
       transition: background-color 0.3s, color 0.3s;
     }
+    .txtDark {
+      color: #1a365d;
+    }
+    .txtLight {
+      color: #fbbf24;
+    }
     .dark .toggle {
       background-color: #d1d5db;
       color: #1a365d;
@@ -79,8 +85,8 @@
   </button>
   <div class="container">
     <div>
-      <h1 id="name" class="highlight">SUCA</h1>
-      <p id="tagline" class="highlight">Brief description or tagline</p>
+      <h1 id="name" class="txtLight">SUCA</h1>
+      <p id="tagline" class="txtLight">Brief description or tagline</p>
     </div>
     <div>
       <a href="https://yourwebsite.com" class="button light">
@@ -115,6 +121,8 @@
       const isDark = body.classList.contains('dark');
       body.classList.toggle('dark', !isDark);
       body.classList.toggle('light', isDark);
+      body.classList.toggle('txtLight', !txtLight);
+      body.classList.toggle('txtLight', txtLight);
 
       icon.setAttribute('data-lucide', isDark ? 'moon' : 'sun');
       lucide.createIcons();
