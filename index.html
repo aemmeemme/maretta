@@ -121,7 +121,7 @@
       const isDark = body.classList.contains('dark');
       body.classList.toggle('dark', !isDark);
       body.classList.toggle('light', isDark);
-      body.classList.toggle('txtLight', !txtLight);
+      body.classList.toggle('txtDark', !txtLight);
       body.classList.toggle('txtLight', txtLight);
 
       icon.setAttribute('data-lucide', isDark ? 'moon' : 'sun');
