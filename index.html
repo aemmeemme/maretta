@@ -39,6 +39,15 @@
       background-color: #fbbf24;
       color: #1a202c;
     }
+    .highlight {
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark .highlight {
+      color: #1a202c;
+      background-color: #fbbf24;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
     .button:hover {
       filter: brightness(90%);
     }
@@ -70,8 +79,8 @@
   </button>
   <div class="container">
     <div>
-      <h1 id="name" class="light">Your Name</h1>
-      <p id="tagline" class="light">Brief description or tagline</p>
+      <h1 id="name" class="highlight">Your Name</h1>
+      <p id="tagline" class="highlight">Brief description or tagline</p>
     </div>
     <div>
       <a href="https://yourwebsite.com" class="button light">
