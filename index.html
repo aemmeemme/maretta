@@ -71,6 +71,20 @@
       background-color: #1a202c;
       color: #fbbf24;
     }
+    .disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    .brand-logo {
+      max-width: 100px;
+      margin-bottom: 16px;
+    }
+    .dark .brand-logo {
+      content: url('logo-dark.png');
+    }
+    .light .brand-logo {
+      content: url('logo-light.png');
+    }
   </style>
 </head>
 <body class="light">
@@ -79,27 +93,14 @@
   </button>
   <div class="container">
     <div>
-      <h1 id="name">SUCA</h1>
-      <p id="tagline">Brief description or tagline</p>
+      <img src="logo-light.png" alt="Brand Logo" class="brand-logo">
     </div>
     <div>
-      <a href="https://yourwebsite.com" class="button light">
+      <a href="#" class="button disabled light ">
         <i data-lucide="globe"></i>&nbsp;Personal Website
       </a>
-      <a href="https://instagram.com/yourusername" class="button light">
+      <a href="https://www.instagram.com/_maretta__/" class="button light">
         <i data-lucide="instagram"></i>&nbsp;Instagram
-      </a>
-      <a href="https://twitter.com/yourusername" class="button light">
-        <i data-lucide="twitter"></i>&nbsp;Twitter
-      </a>
-      <a href="https://linkedin.com/in/yourusername" class="button light">
-        <i data-lucide="linkedin"></i>&nbsp;LinkedIn
-      </a>
-      <a href="https://github.com/yourusername" class="button light">
-        <i data-lucide="github"></i>&nbsp;GitHub
-      </a>
-      <a href="https://facebook.com/yourusername" class="button light">
-        <i data-lucide="facebook"></i>&nbsp;Facebook
       </a>
     </div>
   </div>
