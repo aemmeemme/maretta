@@ -77,8 +77,9 @@
       opacity: 0.5;
     }
     .brand-logo {
-      max-width: 100px;
+      max-width: 300px; /* Increased size */
       margin-bottom: 16px;
+      transition: max-width 0.3s;
     }
     .dark .brand-logo {
       content: url('logo-dark.png');
@@ -97,10 +98,10 @@
       <img src="logo-light.png" alt="Brand Logo" class="brand-logo">
     </div>
     <div>
-      <a href="#" class="button disabled light ">
+      <a href="#" class="button disabled light" rel="noopener noreferrer" target="_blank">
         <i data-lucide="globe"></i>&nbsp;Personal Website
       </a>
-      <a href="https://www.instagram.com/_maretta__/" class="button light">
+      <a href="https://www.instagram.com/_maretta__/" class="button light" rel="noopener noreferrer" target="_blank">
         <i data-lucide="instagram"></i>&nbsp;Instagram
       </a>
     </div>
